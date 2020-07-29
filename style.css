@@ -1,0 +1,89 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+/*
+ BARVY
+ sede pozadi      #e5e5e5
+ svetle fialova   #48418e
+ tmave fialova    #25133d
+
+ POUZITE PISMO
+ Source Sans Pro - rezy pisma light 300, regular 400 a bold 700
+ https://fonts.google.com/specimen/Roboto
+*/
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #e5e5e5;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.celek {
+    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
+    margin: 0 auto; /* pruh je na stránce vycentrovaný */
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ----- zde začni psát vlastní CSS ----- */
+
+.celek{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    
+}
+li{
+    list-style: none;
+    font-weight: bold;
+}
+a{
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+a:hover{
+    background-color: #48418e;
+    color: white;
+}
+.banner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 450px;
+    color: white;
+    background-image: url("images/pozadi.jpg");
+    padding: 40px;
+}
+.nazev{
+    font-size: 90px; 
+   font-weight: 400;
+}
+.popis{
+    font-size: 35px; 
+   font-weight: 300;
+}
+.telefon{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.tlacitka{
+    display: flex;
+}
+.obsah{
+    display: flex;
+}
+.obsah img{
+    width: 10px;
+}
